@@ -1,0 +1,45 @@
+con 500 mil -> 
+Tiempo de inicio en milisegundos: 1618629602759
+Tiempo de finalizacion en milisegundos: 1618629602791
+Tiempo neto en milisegundos: 32
+
+con 1 millon -> 
+Tiempo de inicio en milisegundos: 1618629867649
+Tiempo de finalizacion en milisegundos: 1618629867664
+Tiempo neto en milisegundos: 15
+//inventa un numero que sea logaritmico o intervancia 500 m por 1 M
+
+con 100 mil ->
+Tiempo de inicio en milisegundos: 1618629996807
+Tiempo de finalizacion en milisegundos: 1618629996811
+Tiempo neto en milisegundos: 4
+
+con 50 mil ->
+Tiempo de inicio en milisegundos: 1618630044785
+Tiempo de finalizacion en milisegundos: 1618630044786
+Tiempo neto en milisegundos: 1
+
+con 10 mil -> 
+Tiempo de inicio en milisegundos: 1618630065835
+Tiempo de finalizacion en milisegundos: 1618630065836
+Tiempo neto en milisegundos: 1
+
+con 5 mil ->
+Tiempo de inicio en milisegundos: 1618630111596
+Tiempo de finalizacion en milisegundos: 1618630111596
+Tiempo neto en milisegundos: 0
+
+con 1 mil ->
+Tiempo de inicio en milisegundos: 1618630145569
+Tiempo de finalizacion en milisegundos: 1618630145569
+Tiempo neto en milisegundos: 0
+
+con 500 ->
+Tiempo de inicio en milisegundos: 1618630175282
+Tiempo de finalizacion en milisegundos: 1618630175282
+Tiempo neto en milisegundos: 0
+
+con 100 ->
+Tiempo de inicio en milisegundos: 1618630201081
+Tiempo de finalizacion en milisegundos: 1618630201081
+Tiempo neto en milisegundos: 0
