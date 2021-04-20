@@ -1,7 +1,7 @@
 package ar.unrn.tp3P2.email;
 
+import ar.unrn.tp3P2.email.exception.SmtpException;
 import ar.unrn.tp3P2.modelo.RepositorioEmpleado;
-import ar.unrn.tpP2.email.exception.SmtpException;
 
 public class Email implements RepositorioEmpleado {
 	public String destinatarioEmail;

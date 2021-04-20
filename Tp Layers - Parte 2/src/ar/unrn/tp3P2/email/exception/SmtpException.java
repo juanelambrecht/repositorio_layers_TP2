@@ -1,4 +1,4 @@
-package ar.unrn.tpP2.email.exception;
+package ar.unrn.tp3P2.email.exception;
 
 public class SmtpException extends Exception {
 	/**
