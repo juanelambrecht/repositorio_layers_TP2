@@ -6,9 +6,7 @@ import java.time.format.DateTimeFormatter;
 
 
 public class Empleados implements Serializable {
-	/**
-	 * Aca deberia haber una interface de repositorioEmpleados 
-	 */
+	
 	private static final long serialVersionUID = 1L;
 
 	String apellido, nombre, fecha_de_nacimiento, email;

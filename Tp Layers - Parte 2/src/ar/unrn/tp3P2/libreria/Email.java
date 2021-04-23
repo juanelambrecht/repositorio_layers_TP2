@@ -3,7 +3,7 @@ package ar.unrn.tp3P2.libreria;
 import ar.unrn.tp3P2.libreria.exception.SmtpException;
 import ar.unrn.tp3P2.modelo.RepositorioEnvio;
 
-public class Email{
+public class Email {
 	public String destinatarioEmail;
 	public String tituloEmail;
 	public String cuerpoEmail;
@@ -18,7 +18,7 @@ public class Email{
 //conectar con el servidor SMTP para el envio
 //Si algo sale mal, se lanza una SmtpException
 //Si todo sale bien
-		
+
 		System.out.println("Se envió el email correctamente \n" + this.toString());
 	}
 
