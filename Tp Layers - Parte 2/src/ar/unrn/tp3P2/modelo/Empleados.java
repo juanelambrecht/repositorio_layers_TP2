@@ -4,19 +4,24 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-public class Empleado implements Serializable {
+
+public class Empleados implements Serializable {
 	/**
-	 * 
+	 * Aca deberia haber una interface de repositorioEmpleados 
 	 */
 	private static final long serialVersionUID = 1L;
 
 	String apellido, nombre, fecha_de_nacimiento, email;
 
-	public Empleado(String apellido, String nombre, String fecha_de_nacimiento, String email) {
+	public Empleados(String apellido, String nombre, String fecha_de_nacimiento, String email) {
 		this.apellido = apellido;
 		this.nombre = nombre;
 		this.fecha_de_nacimiento = fecha_de_nacimiento;
 		this.email = email;
+	}
+	
+	public Empleados() {
+		
 	}
 
 	@Override
@@ -40,4 +45,6 @@ public class Empleado implements Serializable {
 	public String EmailDeEmpleado() {
 		return email;
 	}
+
+
 }

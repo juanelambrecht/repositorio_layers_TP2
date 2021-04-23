@@ -1,23 +1,18 @@
 package ar.unrn.tp3P2.main;
 
-import ar.unrn.tp3P2.ui.CargarEmpleado;
-import ar.unrn.tp3P2.ui.EnviarMailEmpleado;
-
 import java.util.ArrayList;
 
-import ar.unrn.tp3P2.email.Email;
+import ar.unrn.tp3P2.modelo.EnviarMensajeEmpleado;
+import ar.unrn.tp3P2.persistencia.DiscoLeerEmpleados;
+import ar.unrn.tp3P2.serviciomail.ServicioMail;
 
 public class Main {
 
 	public static void main(String[] args) {
 
-		ArrayList<Email> listaEmails = new CargarEmpleado().retornarEmails();
-		listaEmails.toString();
-		for (Email email : listaEmails) {
-			EnviarMailEmpleado emailEmpleado = new EnviarMailEmpleado(email);
-			emailEmpleado.EnviarMail();
-		}
-
+		String tituloEmail = "Mensaje de Feliz Cumpleaños";
+		String cuerpoEmail = "¡FELIZ CUMPLEAÑOS!";	
+		new EnviarMensajeEmpleado(new DiscoLeerEmpleados(), new ServicioMail()).EnviarMensaje(tituloEmail, cuerpoEmail);;
 	}
 
 }
