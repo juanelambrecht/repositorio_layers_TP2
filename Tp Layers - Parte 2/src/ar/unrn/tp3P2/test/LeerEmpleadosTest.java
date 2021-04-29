@@ -12,7 +12,7 @@ import ar.unrn.tp3P2.modelo.EnviarMensajeEmpleados;
 import ar.unrn.tp3P2.persistencia.DiscoLeerEmpleados;
 import ar.unrn.tp3P2.serviciomail.ServicioMail;
 
-class EmpleadoTest {
+class LeerEmpleadosTest {
 
 	@Test
 	void test() {

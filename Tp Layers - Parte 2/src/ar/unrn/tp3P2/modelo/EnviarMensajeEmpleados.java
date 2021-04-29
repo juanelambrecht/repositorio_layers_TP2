@@ -10,11 +10,13 @@ public class EnviarMensajeEmpleados {
 	RepositorioEmpleados repositorioEmpleado;
 	RepositorioEnvio repositorioEnvio;
 	ArrayList<Empleados> empleados = new ArrayList<Empleados>();
+	int enviosConExito;
 
 	public EnviarMensajeEmpleados(RepositorioEmpleados repositorioEmpleado, RepositorioEnvio repositorioEnvio) {
 		super();
 		this.repositorioEmpleado = repositorioEmpleado;
 		this.repositorioEnvio = repositorioEnvio;
+		this.enviosConExito = 0;
 	}
 
 	public void EnviarMensaje(String tituloEmail, String cuerpoEmail)
@@ -25,7 +27,7 @@ public class EnviarMensajeEmpleados {
 		for (Empleados empleado : empleados) {
 
 			this.repositorioEnvio.enviar(empleado.EmailDeEmpleado(), tituloEmail, cuerpoEmail);
-
+			enviosConExito++;
 		}
 	}
 
@@ -37,5 +39,9 @@ public class EnviarMensajeEmpleados {
 		}
 
 		return false;
+	}
+	
+	public boolean mailsEnviados(int cantidad) {
+		return enviosConExito == cantidad;
 	}
 }
