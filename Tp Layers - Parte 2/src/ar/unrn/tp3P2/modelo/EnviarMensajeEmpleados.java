@@ -9,7 +9,8 @@ import ar.unrn.tp3P2.libreria.exception.SmtpException;
 public class EnviarMensajeEmpleados {
 	RepositorioEmpleados repositorioEmpleado;
 	RepositorioEnvio repositorioEnvio;
-
+	ArrayList<Empleados> empleados = new ArrayList<Empleados>();
+	
 	public EnviarMensajeEmpleados(RepositorioEmpleados repositorioEmpleado, RepositorioEnvio repositorioEnvio) {
 		super();
 		this.repositorioEmpleado = repositorioEmpleado;
@@ -19,7 +20,7 @@ public class EnviarMensajeEmpleados {
 	public void EnviarMensaje(String tituloEmail, String cuerpoEmail)
 			throws FileNotFoundException, ClassNotFoundException, IOException, SmtpException {
 
-		ArrayList<Empleados> empleados = this.repositorioEmpleado.leerEmpleados();
+		empleados = this.repositorioEmpleado.leerEmpleados();
 
 		for (Empleados empleado : empleados) {
 
@@ -27,5 +28,14 @@ public class EnviarMensajeEmpleados {
 
 		}
 	}
-
+	
+	public boolean ExisteEmpleado(Empleados empleado) {
+		
+		for(Empleados empleadoLista: this.empleados) {
+			if(empleadoLista.EmailDeEmpleado().equals(empleado.EmailDeEmpleado()))
+				return true;
+		}
+		
+		return false;
+	}
 }

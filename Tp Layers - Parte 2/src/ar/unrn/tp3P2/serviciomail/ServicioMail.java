@@ -10,8 +10,6 @@ public class ServicioMail implements RepositorioEnvio{
 	public void enviar(String destinatarioEmail, String tituloEmail, String cuerpoEmail) throws SmtpException {
 	
 			new Email(destinatarioEmail, tituloEmail, cuerpoEmail).enviar();
-		
-		
 	}
 
 }

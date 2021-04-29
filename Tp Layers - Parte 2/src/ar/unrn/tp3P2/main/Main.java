@@ -10,7 +10,6 @@ import ar.unrn.tp3P2.serviciomail.ServicioMail;
 public class Main {
 
 	public static void main(String[] args) {
-		// aca deberia estar el try catch
 		String tituloEmail = "Mensaje de Feliz Cumpleaños";
 		String cuerpoEmail = "¡FELIZ CUMPLEAÑOS!";
 		String nombreArchivo = "empleados.txt";
@@ -22,7 +21,7 @@ public class Main {
 		} catch (ClassNotFoundException | IOException | SmtpException e) {
 			throw new RuntimeException(e);
 		}
-		;
+
 	}
 
 }

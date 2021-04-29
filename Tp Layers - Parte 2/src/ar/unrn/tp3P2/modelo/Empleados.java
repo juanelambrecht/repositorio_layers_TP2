@@ -28,10 +28,6 @@ public class Empleados implements Serializable {
 				+ ", email=" + email + "]";
 	}
 
-	public String retornarMailEmpleado() {
-		return this.email;
-	}
-
 	public boolean esSuCumpleaños() {
 		LocalDate localDate = LocalDate.now();
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd");

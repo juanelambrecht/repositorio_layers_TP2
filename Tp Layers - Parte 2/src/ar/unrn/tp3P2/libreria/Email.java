@@ -15,9 +15,9 @@ public class Email {
 	}
 
 	public void enviar() throws SmtpException {
-//conectar con el servidor SMTP para el envio
-//Si algo sale mal, se lanza una SmtpException
-//Si todo sale bien
+	//conectar con el servidor SMTP para el envio
+	//Si algo sale mal, se lanza una SmtpException
+	//Si todo sale bien
 
 		System.out.println("Se envió el email correctamente \n" + this.toString());
 	}
