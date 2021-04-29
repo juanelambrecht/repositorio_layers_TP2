@@ -10,7 +10,7 @@ public class EnviarMensajeEmpleados {
 	RepositorioEmpleados repositorioEmpleado;
 	RepositorioEnvio repositorioEnvio;
 	ArrayList<Empleados> empleados = new ArrayList<Empleados>();
-	
+
 	public EnviarMensajeEmpleados(RepositorioEmpleados repositorioEmpleado, RepositorioEnvio repositorioEnvio) {
 		super();
 		this.repositorioEmpleado = repositorioEmpleado;
@@ -28,14 +28,14 @@ public class EnviarMensajeEmpleados {
 
 		}
 	}
-	
+
 	public boolean ExisteEmpleado(Empleados empleado) {
-		
-		for(Empleados empleadoLista: this.empleados) {
-			if(empleadoLista.EmailDeEmpleado().equals(empleado.EmailDeEmpleado()))
+
+		for (Empleados empleadoLista : this.empleados) {
+			if (empleadoLista.EmailDeEmpleado().equals(empleado.EmailDeEmpleado()))
 				return true;
 		}
-		
+
 		return false;
 	}
 }

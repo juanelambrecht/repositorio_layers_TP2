@@ -16,28 +16,28 @@ class EmpleadoTest {
 
 	@Test
 	void test() {
-		
+
 		String tituloEmail = "Mensaje de Feliz Cumpleaños";
 		String cuerpoEmail = "¡FELIZ CUMPLEAÑOS!";
 		String nombreArchivo = "empleados.txt";
-		
+
 		Empleados empleado1 = new Empleados("Young", "Angus", "1982/" + DiscoLeerEmpleados.MesyDia(), "angus@acdc.com");
-		Empleados empleado2 = new Empleados("Johnson", "Brian", "1975/" + DiscoLeerEmpleados.MesyDia(), "brian@acdc.com");
-		
+		Empleados empleado2 = new Empleados("Johnson", "Brian", "1975/" + DiscoLeerEmpleados.MesyDia(),
+				"brian@acdc.com");
+
 		try {
-			EnviarMensajeEmpleados envioMensaje =new EnviarMensajeEmpleados(new DiscoLeerEmpleados(nombreArchivo), new ServicioMail());
-			
+			EnviarMensajeEmpleados envioMensaje = new EnviarMensajeEmpleados(new DiscoLeerEmpleados(nombreArchivo),
+					new ServicioMail());
+
 			envioMensaje.EnviarMensaje(tituloEmail, cuerpoEmail);
-			
+
 			assertTrue(envioMensaje.ExisteEmpleado(empleado1));
 			assertTrue(envioMensaje.ExisteEmpleado(empleado2));
-			
+
 		} catch (ClassNotFoundException | IOException | SmtpException e) {
 			throw new RuntimeException(e);
 		}
-	
-		
-		
+
 	}
 
 }

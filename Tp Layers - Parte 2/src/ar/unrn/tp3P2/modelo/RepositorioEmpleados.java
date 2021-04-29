@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public interface RepositorioEmpleados {
-	
+
 	ArrayList<Empleados> leerEmpleados() throws FileNotFoundException, IOException, ClassNotFoundException;
-	
+
 }

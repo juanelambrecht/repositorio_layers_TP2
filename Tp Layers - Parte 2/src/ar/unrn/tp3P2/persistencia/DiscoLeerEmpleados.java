@@ -16,7 +16,7 @@ public class DiscoLeerEmpleados implements RepositorioEmpleados {
 	String nombreArchivo;
 	RepositorioEnvio repositorio;
 	ArrayList<Empleados> empleados = new ArrayList<Empleados>();
-	
+
 	public DiscoLeerEmpleados(String nombreArchivo) throws FileNotFoundException, IOException {
 		this.nombreArchivo = nombreArchivo;
 		this.cargarEmpleados();
@@ -25,7 +25,7 @@ public class DiscoLeerEmpleados implements RepositorioEmpleados {
 	public ArrayList<Empleados> leerEmpleados() throws FileNotFoundException, IOException, ClassNotFoundException {
 
 		String nombreFichero = this.nombreArchivo;
-		
+
 		ObjectInputStream entrada = new ObjectInputStream(new FileInputStream(nombreFichero));
 
 		empleados = (ArrayList<Empleados>) entrada.readObject();
@@ -37,10 +37,10 @@ public class DiscoLeerEmpleados implements RepositorioEmpleados {
 
 	private void cargarEmpleados() throws FileNotFoundException, IOException {
 		String nombreFichero = this.nombreArchivo;
-		
 
 		Empleados empleado = new Empleados("Young", "Angus", "1982/" + DiscoLeerEmpleados.MesyDia(), "angus@acdc.com");
-		Empleados empleado2 = new Empleados("Johnson", "Brian", "1975/" + DiscoLeerEmpleados.MesyDia(), "brian@acdc.com");
+		Empleados empleado2 = new Empleados("Johnson", "Brian", "1975/" + DiscoLeerEmpleados.MesyDia(),
+				"brian@acdc.com");
 
 		empleados.add(empleado);
 		empleados.add(empleado2);
@@ -58,6 +58,5 @@ public class DiscoLeerEmpleados implements RepositorioEmpleados {
 		return LocalDate.now().format(DateTimeFormatter.ofPattern("MM/dd"));
 
 	}
-
 
 }

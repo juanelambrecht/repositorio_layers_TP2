@@ -4,9 +4,8 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-
 public class Empleados implements Serializable {
-	
+
 	private static final long serialVersionUID = 1L;
 
 	String apellido, nombre, fecha_de_nacimiento, email;
@@ -17,9 +16,9 @@ public class Empleados implements Serializable {
 		this.fecha_de_nacimiento = fecha_de_nacimiento;
 		this.email = email;
 	}
-	
+
 	public Empleados() {
-		
+
 	}
 
 	@Override
@@ -39,6 +38,5 @@ public class Empleados implements Serializable {
 	public String EmailDeEmpleado() {
 		return email;
 	}
-
 
 }
